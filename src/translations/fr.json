@@ -1,0 +1,18 @@
+{
+  "homepage.header": "Bonjour",
+  "notFound.header": "Page non trouvée",
+  "notFound.content": "La page que vous cherchez n'existe pas !",
+  "header.logout-button": "Déconnexion",
+  "login.form.email.label": "Email",
+  "login.form.email.placeholder": "Email",
+  "login.form.password.label": "Mot de passe",
+  "login.form.password.placeholder": "Mot de passe",
+  "login.form.forgot-password-link": "Mot de passe oublié",
+  "login.form.signup-link": "S'incrire",
+  "login.form.submit": "Connexion",
+  "signup.form.email.label": "Email",
+  "signup.form.email.placeholder": "Email",
+  "signup.form.password.label": "Mot de passe",
+  "signup.form.password.placeholder": "Mot de passe",
+  "signup.form.submit": "S'incrire"
+}
