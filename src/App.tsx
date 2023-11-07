@@ -5,7 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Provider as UserProvider } from "./components/providers/UserProvider";
 import { themes } from "./theme";
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { GamesRouter } from "./pages/games";
 import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
@@ -28,7 +28,7 @@ function App() {
       <ThemeProvider theme={currentTheme}>
         <CssBaseline />
         <UserProvider>
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route path="/" Component={HomePage} />
               <Route path="/games/*" Component={GamesRouter} />
@@ -37,7 +37,7 @@ function App() {
               <Route path="/auth/signup" Component={SignupPage} />
               <Route path="*" Component={NotFoundPage} />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </UserProvider>
       </ThemeProvider>
     </div>
