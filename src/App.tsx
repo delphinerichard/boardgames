@@ -11,6 +11,7 @@ import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
 import { SignupPage } from "./pages/SignupPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { ProfileRouter } from "./pages/profile";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -31,6 +32,7 @@ function App() {
             <Routes>
               <Route path="/" Component={HomePage} />
               <Route path="/games/*" Component={GamesRouter} />
+              <Route path="/profile/*" Component={ProfileRouter} />
               <Route path="/auth/login" Component={LoginPage} />
               <Route path="/auth/signup" Component={SignupPage} />
               <Route path="*" Component={NotFoundPage} />

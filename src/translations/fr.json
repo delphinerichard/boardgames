@@ -14,5 +14,6 @@
   "signup.form.email.placeholder": "Email",
   "signup.form.password.label": "Mot de passe",
   "signup.form.password.placeholder": "Mot de passe",
-  "signup.form.submit": "S'incrire"
+  "signup.form.submit": "S'incrire",
+  "profile.form.submit": "Enregistrer"
 }

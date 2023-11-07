@@ -4,8 +4,10 @@ import { FormattedMessage } from "react-intl";
 import GameCard from "../../components/GameCard";
 import { Grid } from "@mui/material";
 import Header from "../../components/Header";
+import { useUser } from "../../components/providers/UserProvider";
 
 export function GameListPage() {
+  const { user } = useUser();
   return (
     <>
       <Header></Header>
@@ -18,7 +20,8 @@ export function GameListPage() {
             values={{
               username: "Delphine",
             }}
-          />
+          />{" "}
+          {user?.displayName}
         </h1>
         <img src={logo} className="App-logo" alt="logo" />
         <Grid
