@@ -36,7 +36,7 @@ export function GameListPage() {
           <GameCard
             gameName="Terraforming Mars"
             gameLink="tm"
-            gameCoverLink="boardgames/assets/cover-img/tm.png"
+            gameCoverLink="assets/cover-img/tm.png"
             gameDescription="Décompte des points pour le jeu de Terraforming Mars"
           ></GameCard>
         </Grid>
@@ -44,7 +44,7 @@ export function GameListPage() {
           <GameCard
             gameName="Les Aventuriers du Rail"
             gameLink="https://jrmdel.github.io/TicketToRide"
-            gameCoverLink="boardgames/assets/cover-img/ticket-to-ride2.PNG"
+            gameCoverLink="assets/cover-img/ticket-to-ride2.PNG"
             gameDescription="Lien vers le site de Jérémie pour compter les points des Aventuriers du Rail"
             externalLink={true}
           ></GameCard>
@@ -53,7 +53,7 @@ export function GameListPage() {
           <GameCard
             gameName="Skyjo"
             gameLink="skyjo"
-            gameCoverLink="boardgames/assets/cover-img/skyjo.jpg"
+            gameCoverLink="assets/cover-img/skyjo.jpg"
             gameDescription="Décompte des points pour le jeu de Skyjo"
           ></GameCard>
         </Grid>
