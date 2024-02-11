@@ -3,6 +3,8 @@
   "notFound.header": "Page non trouvée",
   "notFound.content": "La page que vous cherchez n'existe pas !",
   "header.logout-button": "Déconnexion",
+  "header.login-button": "Se connecter",
+  "homepage.go-to-games-button": "Accéder aux jeux",
   "login.form.email.label": "Email",
   "login.form.email.placeholder": "Email",
   "login.form.password.label": "Mot de passe",

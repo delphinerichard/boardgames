@@ -1,12 +1,14 @@
-import logo from "../assets/svg/logo.svg";
 import "../App.css";
 import { FormattedMessage } from "react-intl";
 import { Button } from "@mui/material";
 import Header from "../components/Header";
-import { useNavigate } from "react-router";
+import { useUser } from "../components/providers/UserProvider";
+import { useNavigate } from "react-router-dom";
 
 export function HomePage() {
+  const { user } = useUser();
   const navigation = useNavigate();
+
   return (
     <>
       <Header></Header>
@@ -21,15 +23,18 @@ export function HomePage() {
             }}
           />
         </h1>
-        <Button
-          onClick={() => navigation(`/auth/login`)}
-          color="secondary"
-          variant="contained"
-        >
-          {" "}
-          Se connecter
-        </Button>
-        <img src={logo} className="App-logo" alt="logo" />
+        <p> Page en cours de construction</p>
+
+        {user && (
+          <Button
+            onClick={() => navigation(`/games`)}
+            color="secondary"
+            variant="contained"
+            sx={{ marginRight: 2 }}
+          >
+            <FormattedMessage id="homepage.go-to-games-button" />
+          </Button>
+        )}
       </header>
     </>
   );

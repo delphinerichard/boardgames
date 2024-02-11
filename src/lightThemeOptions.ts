@@ -56,15 +56,6 @@ const lightThemeOptions: ThemeOptions = {
     },
   },
   components: {
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderWidth: "0.03rem 0.187rem 0.187rem 0.03rem;",
-          borderColor: "#000000",
-          borderStyle: "solid",
-        },
-      },
-    },
     MuiTextField: {
       styleOverrides: {
         root: {
@@ -85,8 +76,8 @@ const lightThemeOptions: ThemeOptions = {
         root: (props) => {
           const buttonCss: CSSInterpolation = {};
           if (props.ownerState.variant === "outlined") {
-            buttonCss.border = "0.125rem solid #A57B48";
-            buttonCss.color = "#A57B48";
+            buttonCss.border = "0.125rem solid #4D1F2D";
+            buttonCss.color = "#4D1F2D";
             buttonCss.padding = "0.1rem";
             buttonCss["&:hover"] = {
               backgroundColor: "rgba(165, 123, 72, 0.15)",
@@ -99,7 +90,7 @@ const lightThemeOptions: ThemeOptions = {
             buttonCss.padding = "0.4rem";
             buttonCss["&:hover"] = {
               backgroundColor:
-                "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #A57B48",
+                "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #4D1F2D",
             };
           }
           return {
@@ -109,9 +100,10 @@ const lightThemeOptions: ThemeOptions = {
             fontSize: "1rem",
             lineHeight: "1.625rem",
             letterSpacing: "0.029rem",
-            borderRadius: "4.5rem",
+            borderRadius: "0.5rem",
             textTransform: "none",
-            minWidth: "17.62rem",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
           };
         },
       },

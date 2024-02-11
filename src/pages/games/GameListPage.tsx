@@ -1,85 +1,63 @@
-import logo from "../../assets/svg/logo.svg";
 import "../../App.css";
 import { FormattedMessage } from "react-intl";
 import GameCard from "../../components/GameCard";
-import { Grid } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import Header from "../../components/Header";
 import { useUser } from "../../components/providers/UserProvider";
 
 export function GameListPage() {
   const { user } = useUser();
   return (
-    <>
+    <Stack>
       <Header></Header>
-      <header className="App-header">
-        <h1>
-          <FormattedMessage
-            id="homepage.header"
-            description="message"
-            defaultMessage="Welcome {username}"
-            values={{
-              username: "Delphine",
-            }}
-          />{" "}
-          {user?.displayName}
-        </h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <Grid
-          container
-          sx={{
-            flexDirection: "horizontal",
-            justifyContent: "space-evenly",
+      <h1>
+        <FormattedMessage
+          id="homepage.header"
+          description="message"
+          defaultMessage="Welcome {username}"
+          values={{
+            username: "Delphine",
           }}
-        >
-          <Grid item xs={12} md={4} mb={1}>
-            <GameCard
-              gameName="Jeu 1"
-              gameDescription="Décompte des points pour le premier jeu"
-            ></GameCard>
-          </Grid>
-          <Grid item xs={12} md={4} mb={1}>
-            <GameCard
-              gameName="Jeu 2"
-              gameDescription="Décompte des points pour le deuxième jeu"
-            ></GameCard>
-          </Grid>
-          <Grid item xs={12} md={4} mb={1}>
-            <GameCard
-              gameName="Jeu 3"
-              gameDescription="Décompte des points pour le troisième jeu"
-            ></GameCard>
-          </Grid>
-          <Grid item xs={12} md={4} mb={1}>
-            <GameCard
-              gameName="Jeu 4"
-              gameDescription="Décompte des points pour le quatrième jeu"
-            ></GameCard>
-          </Grid>
-          <Grid item xs={12} md={4} mb={1}>
-            <GameCard
-              gameName="Jeu 5"
-              gameDescription="Décompte des points pour le cinquième jeu"
-            ></GameCard>
-          </Grid>
-          <Grid item xs={12} md={4} mb={1}>
-            <GameCard
-              gameName="Jeu 6"
-              gameDescription="Décompte des points pour le sixième jeu"
-            ></GameCard>
-          </Grid>
+        />{" "}
+        {user?.displayName}
+      </h1>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          flexDirection: "horizontal",
+          justifyContent: "space-evenly",
+          maxWidth: "90%",
+          marginTop: 2,
+          alignSelf: "center",
+        }}
+      >
+        <Grid item xs={12} md={4} mb={1}>
+          <GameCard
+            gameName="Terraforming Mars"
+            gameLink="tm"
+            gameCoverLink="boardgames/assets/cover-img/tm.png"
+            gameDescription="Décompte des points pour le jeu de Terraforming Mars"
+          ></GameCard>
         </Grid>
-        {/* <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
-    </>
+        <Grid item xs={12} md={4} mb={1}>
+          <GameCard
+            gameName="Les Aventuriers du Rail"
+            gameLink="https://jrmdel.github.io/TicketToRide"
+            gameCoverLink="boardgames/assets/cover-img/ticket-to-ride2.PNG"
+            gameDescription="Lien vers le site de Jérémie pour compter les points des Aventuriers du Rail"
+            externalLink={true}
+          ></GameCard>
+        </Grid>
+        <Grid item xs={12} md={4} mb={1}>
+          <GameCard
+            gameName="Skyjo"
+            gameLink="skyjo"
+            gameCoverLink="boardgames/assets/cover-img/skyjo.jpg"
+            gameDescription="Décompte des points pour le jeu de Skyjo"
+          ></GameCard>
+        </Grid>
+      </Grid>
+    </Stack>
   );
 }
